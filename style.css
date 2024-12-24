@@ -34,6 +34,7 @@ body::before {
   text-align: center;
   width: 90%;
   max-width: 800px;
+  gap: 20px; /* Add consistent spacing between elements */
 }
 
 /* Personal Note */
@@ -41,13 +42,13 @@ body::before {
   font-size: 2rem;
   font-style: italic;
   color: #f8c291; /* Soft champagne color */
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Coordinates Styling */
 .coordinates p {
-  font-size: 7rem; /* Large font for coordinates */
+  font-size: 6rem; /* Adjust font size for better scaling */
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -57,9 +58,9 @@ body::before {
 
 /* Message Styling */
 .message p {
-  font-size: 2rem; /* Smaller font for the message */
-  margin: 10px 0;
-  line-height: 1.6;
+  font-size: 1.8rem; /* Adjust for smaller devices */
+  margin: 5px 0;
+  line-height: 1.5;
   color: #f8f8f8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -67,10 +68,10 @@ body::before {
 /* Present Box */
 .present-box {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background: linear-gradient(135deg, #e63946, #d9145c);
-  margin-top: 40px;
+  margin-top: 20px; /* Reduced margin for better visibility */
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -96,52 +97,43 @@ body::before {
 
 .present-box::before {
   width: 100%;
-  height: 15px;
+  height: 10px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .present-box::after {
   height: 100%;
-  width: 15px;
+  width: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 /* "Open Me" Label Below Present */
 .present-label {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
   font-weight: bold;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin-top: 180px; /* Position below the present */
-}
-
-/* Animations */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  margin-top: 10px; /* Adjusted to fit better on small screens */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .coordinates p {
-    font-size: 5rem; /* Adjust font size for tablets */
+    font-size: 4.5rem; /* Smaller font for tablets */
   }
   .message p {
     font-size: 1.5rem;
   }
   .present-box {
-    width: 120px; /* Scale down present box */
-    height: 120px;
+    width: 100px; /* Adjust size for smaller screens */
+    height: 100px;
+    margin-top: 15px;
   }
   .present-label {
-    font-size: 1.2rem; /* Adjust label size */
+    font-size: 1rem;
   }
 }
 
@@ -154,10 +146,11 @@ body::before {
     font-size: 1.2rem;
   }
   .present-box {
-    width: 100px; /* Smaller present box for phones */
-    height: 100px;
+    width: 90px; /* Smaller present box for phones */
+    height: 90px;
+    margin-top: 10px;
   }
   .present-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
